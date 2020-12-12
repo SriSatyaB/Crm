@@ -1,0 +1,221 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-12T03:17:46.751Z",
+        "line": 14,
+        "name": "To test the crm Login Functionality for Valid User",
+        "description": "",
+        "id": "to-test-the-crm-application-login;to-test-the-crm-login-functionality-for-valid-user;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11525000000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "user enters the url",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.user_enters_the_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1602000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user clicks on the login button",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 231000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user enters \"pdeep.nov20@mail.com\" and \"Satya@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"pdeep.nov20@mail.com\"",
+                  "offset": 12
+                },
+                {
+                  "val": "\"Satya@123\"",
+                  "offset": 39
+                }
+              ],
+              "location": "com.stepDefinitions.Crm_LoginSteps.user_enters_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 73000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks on the submit button",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_submit_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user should be launched on the home page",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.user_should_be_launched_on_the_home_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 669000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user verify the username",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.user_verify_the_username()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 339000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "logout from the application",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.logout_from_the_application()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "close the browser",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-12T03:18:01.400Z",
+        "line": 26,
+        "name": "To test the crm Login Functionality for InValid User",
+        "description": "",
+        "id": "to-test-the-crm-application-login;to-test-the-crm-login-functionality-for-invalid-user;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6942000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enters the url",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.user_enters_the_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1435000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user clicks on the login button",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 197000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user enters invalid \"sri@gmail.com\" and invalid \"Sri123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sri@gmail.com\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"Sri123\"",
+                  "offset": 48
+                }
+              ],
+              "location": "com.stepDefinitions.Crm_LoginSteps.user_enters_invalid_and_invalid(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user clicks on the submit button",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_submit_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 725000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "invalid credentials message is displayed",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.invalid_credentials_message_is_displayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "close the browser",
+            "match": {
+              "location": "com.stepDefinitions.Crm_LoginSteps.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "To test the crm application Login",
+    "description": "",
+    "id": "to-test-the-crm-application-login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/crm_login.feature",
+    "tags": []
+  }
+]
