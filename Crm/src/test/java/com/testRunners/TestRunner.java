@@ -18,6 +18,7 @@ import io.cucumber.testng.CucumberOptions;
 						//"testng:target/testng-cucumber-reports/cuketestng.xml",
 						},
 				dryRun=false,//if true tests cases will not run
+				strict=true,
 				monochrome= true,//for better console output
 		glue= {"com.stepDefinitions"}
 		
