@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/Features",
+		features = "src/test/resources/Features/crm_calendar.feature",
 				plugin = {"pretty",
 						"html:Reports/cucumber-html-report", 
 						"json:Reports/cucumber-html-report/jsonreport.json",

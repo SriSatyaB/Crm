@@ -13,6 +13,7 @@ Then close the browser
  |email|password|
  |pdeep.nov20@mail.com|Satya@123|
  
+ 
  Scenario Outline: To test the crm Login Functionality for InValid User
 Given user enters the url 
 Then user clicks on the login button
