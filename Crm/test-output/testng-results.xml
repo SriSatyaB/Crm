@@ -1,36 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22376" started-at="2020-12-14T15:23:13Z" finished-at="2020-12-14T15:23:35Z">
+  <suite name="Default suite" duration-ms="28090" started-at="2020-12-16T16:38:58Z" finished-at="2020-12-16T16:39:26Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunners.TestRunner@5dda14d0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunners.TestRunner@3b4ef7]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="22376" started-at="2020-12-14T15:23:13Z" finished-at="2020-12-14T15:23:35Z">
+    <test name="Default test" duration-ms="28090" started-at="2020-12-16T16:38:58Z" finished-at="2020-12-16T16:39:26Z">
       <class name="com.testRunners.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.testRunners.TestRunner@5dda14d0]" name="setUpClass" is-config="true" duration-ms="780" started-at="2020-12-14T15:23:13Z" finished-at="2020-12-14T15:23:14Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.testRunners.TestRunner@3b4ef7]" name="setUpClass" is-config="true" duration-ms="1054" started-at="2020-12-16T16:38:58Z" finished-at="2020-12-16T16:38:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunners.TestRunner@5dda14d0]" name="runScenario" duration-ms="19918" started-at="2020-12-14T15:23:14Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-14T15:23:33Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunners.TestRunner@3b4ef7]" name="runScenario" duration-ms="14589" started-at="2020-12-16T16:38:59Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-16T16:39:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA["To test the crm calendar functionality"]]>
+                <![CDATA["To test the crm Login Functionality for Valid User"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["To test the crm application calendar"]]>
+                <![CDATA["To test the crm application Login"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.testRunners.TestRunner@5dda14d0]" name="tearDownClass" is-config="true" duration-ms="1382" started-at="2020-12-14T15:23:34Z" finished-at="2020-12-14T15:23:35Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunners.TestRunner@3b4ef7]" name="runScenario" duration-ms="11351" started-at="2020-12-16T16:39:14Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-16T16:39:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To test the crm Login Functionality for InValid User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To test the crm application Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.testRunners.TestRunner@3b4ef7]" name="tearDownClass" is-config="true" duration-ms="881" started-at="2020-12-16T16:39:25Z" finished-at="2020-12-16T16:39:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

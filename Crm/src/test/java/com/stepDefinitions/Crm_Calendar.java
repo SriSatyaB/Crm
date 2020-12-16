@@ -59,23 +59,24 @@ public class Crm_Calendar extends Library {
 	}
 
 	@Then("new event form is opened")
-	public void new_event_form_is_opened() {
-
+	public void new_event_form_is_opened() throws Exception {
+		Thread.sleep(2000);
 	}
 
 	@Then("user enters {string} in title")
-	public void user_enters_in_title(String tname) {
+	public void user_enters_in_title(String tname) throws Exception {
 		cp.enterTitle(tname);
 	}
-//	@Then("user enters a  {string} calendar")
-//	public void user_enters_a_calendar(String cname) {
-//	    cp.enterCalendarName(cname);
-//	}
 
-	@Then("user enters a  calendar")
-	public void user_enters_a_calendar() {
-		cp.enterCalendarName();
+	@Then("user enters a  {string} calendar")
+	public void user_enters_a_calendar(String cname) {
+		cp.enterNewCalendarName(cname);
 	}
+
+//	@Then("user enters a  calendar")
+//	public void user_enters_a_calendar() {
+//		cp.enterCalendarName();
+//	}
 
 	@Then("user enters {string} as startdate")
 	public void user_enters_as_startdate(String startdate) {
@@ -83,80 +84,81 @@ public class Crm_Calendar extends Library {
 	}
 
 	@Then("user enters {string} as enddate")
-	public void user_enters_as_enddate(String enddate) {
+	public void user_enters_as_enddate(String enddate) throws Exception {
 		// cp.enterEndDate(enddate);
 	}
 
 	@Then("user enters {string} in description")
 	public void user_enters_in_description(String description) {
-		cp.enterDescription(description);
+		// cp.enterDescription(description);
 	}
 
 	@Then("user enters {string} in location")
 	public void user_enters_in_location(String location) {
-		cp.enterLocation(location);
+		// cp.enterLocation(location);
 	}
 
 	@Then("user selects {string} in category")
 	public void user_selects_in_category(String category) {
-		cp.selectCategory(category);
+		// cp.selectCategory(category);
 	}
 
 	@Then("user enters one or more  tags")
 	public void user_enters_one_or_more_tags(io.cucumber.datatable.DataTable tagsDataTable) throws Exception {
-		List<String> tagsData = tagsDataTable.asList();
-		for (int i = 0; i < tagsData.size(); i++) {
-			cp.enterTagValue(tagsData.get(i));
-			
-			System.out.println(tagsData.get(i));
-		}
-
+//		List<String> tagsData = tagsDataTable.asList();
+//		for (int i = 0; i < tagsData.size(); i++) {
+//			cp.enterTagValue(tagsData.get(i));
+//			
+//			System.out.println(tagsData.get(i));
+//		}
+//
 	}
 
 	@Then("user enters one or more deals")
 	public void user_enters_one_or_more_deals(io.cucumber.datatable.DataTable dealsDataTable) throws Exception {
-		List<String> dealsData = dealsDataTable.asList();
-		for (int i = 0; i < dealsData.size(); i++) {
-			cp.enterDeals(dealsData.get(i));
-			
-		}
+//		List<String> dealsData = dealsDataTable.asList();
+//		for (int i = 0; i < dealsData.size(); i++) {
+//			cp.enterDeals(dealsData.get(i));
+//			
+//		}
 	}
 
 	@Then("user enters {string} in case")
 	public void user_enters_in_case(String case1) {
-		cp.enterCase(case1);
+		// cp.enterCase(case1);
 	}
 
 	@Then("user checks the allDay toggle")
 	public void user_checks_the_allDay_toggle() {
-		cp.clickOnAllDay();
+		// cp.clickOnAllDay();
 	}
 
 	@Then("user enters one or more tasks")
 	public void user_enters_one_or_more_tasks(io.cucumber.datatable.DataTable taskDataTable) {
-		List<String> taskData = taskDataTable.asList();
-		for (int i = 0; i < taskData.size(); i++) {
-			cp.addTask(taskData.get(i));
-		}
+//		List<String> taskData = taskDataTable.asList();
+//		for (int i = 0; i < taskData.size(); i++) {
+//			cp.addTask(taskData.get(i));
+//		}
 	}
 
 	@Then("user selects {string} as alert time")
 	public void user_selects_as_alert_time(String time) {
-		cp.selectAlertTime(time);
+		// cp.selectAlertTime(time);
 	}
 
 	@Then("user enters company as {string}")
 	public void user_enters_company_as(String cName) {
-		cp.enterCompany(cName);
+		// cp.enterCompany(cName);
 	}
 
 	@Then("user clicks on the save Btn")
 	public void user_clicks_on_the_save_Btn() {
-		 cp.clickOnSaveBtn();
+		// cp.clickOnSaveBtn();
 	}
-	@Then ("user takes a screenshot")
+
+	@Then("user takes a screenshot")
 	public void user_takes_a_screenshot() {
-		cp.takesScreenshot();
+		// cp.takesScreenshot();
 	}
 
 }

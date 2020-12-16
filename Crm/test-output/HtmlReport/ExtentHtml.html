@@ -43,7 +43,8 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
 		<span class='report-name'>ExtentReports</span>
@@ -52,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 14, 2020 07:23:13 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 16, 2020 08:38:59 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -74,6 +75,18 @@
 			</div>
 			<!-- test toggle -->
 			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@FunctionalTest</a></li>
+					<li><a href='#'>@SmokeTest</a></li>
+					<li><a href='#'>@RegressionTest</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
 			<!-- category toggle -->
 			<!-- clear filters -->
 			<div class='chip transparent hide'>
@@ -124,7 +137,7 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -140,7 +153,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>24</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>14</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -165,8 +178,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>To test the crm application calendar</span>
-						<span class='test-time'>Dec 14, 2020 07:23:14 AM</span>
+						<span class='test-name'>To test the crm application Login</span>
+						<span class='test-time'>Dec 16, 2020 08:39:09 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -176,107 +189,93 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 19s+425ms</span>
+<div class='scenario outline node' test-id='2' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@SmokeTest</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+24ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the crm calendar functionality</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: To test the crm Login Functionality for Valid User</div>
+		<table class='runtime-table table-striped table'><tr><td>email</td><td>password</td></tr><tr><td>pdeep.nov20@mail.com</td><td>Satya@123</td></tr></table>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node given pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_the_crm_url()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user enters the crm  url</div>
-			<div class="node-step"></div>
+		<li test-id='3' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>To test the crm Login Functionality for Valid User</div>
+			<ul class='gc steps'>
+				<li test-id='5' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.user_enters_the_url()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user enters the url</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='6' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_login_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user clicks on the login button</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='7' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.user_enters_and(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters "pdeep.nov20@mail.com" and "Satya@123"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='8' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_submit_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user clicks on the submit button</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='9' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.user_should_be_launched_on_the_home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user should be launched on the home page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='10' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.user_verify_the_username()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user verify the username</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='11' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.logout_from_the_application()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then logout from the application</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='12' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.close_the_browser()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then close the browser</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
 		</li>
-		<li test-id='4' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_clicks_on_login_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user clicks on  login button</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='5' class='node when pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_email_and_password()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters email and password</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='6' class='node and pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_clicks_on_submit_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user clicks on  submit button</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='7' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_navigates_to_the_home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user navigates to the home page</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='8' class='node given pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_is_logged_into_the_application()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is logged into the application</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='9' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_clicks_on_the_calendar_icon()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user clicks on the calendar icon</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='10' class='node when pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_clicks_on_the_new_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user clicks on the new button</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='11' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.new_event_form_is_opened()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then new event form is opened</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='12' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_in_title(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters "Framework5" in title</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='13' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_a_calendar()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters a  calendar</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='14' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_as_startdate(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters "15/12/2020 20:00" as startdate</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='15' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_as_enddate(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters "16/12/2020 20:00" as enddate</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='16' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_in_description(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters "This is my first test calendar" in description</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='17' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_in_location(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters "Ca office" in location</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='18' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_selects_in_category(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user selects "Important" in category</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='19' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_one_or_more_tags(io.cucumber.datatable.DataTable)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters one or more  tags</div>
-			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>t1</td><td>t2</td><td>t3</td><td>t4</td></tr></table></div>
-		</li>
-		<li test-id='20' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_one_or_more_deals(io.cucumber.datatable.DataTable)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters one or more deals</div>
-			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>deals2</td></tr></table></div>
-		</li>
-		<li test-id='21' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_in_case(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters "case1" in case</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='22' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_checks_the_allDay_toggle()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user checks the allDay toggle</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='23' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_one_or_more_tasks(io.cucumber.datatable.DataTable)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters one or more tasks</div>
-			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>task6</td></tr></table></div>
-		</li>
-		<li test-id='24' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_selects_as_alert_time(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user selects "30 Minutes" as alert time</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='25' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_enters_company_as(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters company as "Agama"</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='26' class='node then pass' status='pass'>
-			<div class="step-name" title="com.stepDefinitions.Crm_Calendar.user_clicks_on_the_save_Btn()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user clicks on the save Btn</div>
-			<div class="node-step"></div>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='14' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@RegressionTest</span>
+	</div>
+	<span class='duration right label'>0h 0m 2s+306ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: To test the crm Login Functionality for InValid User</div>
+		<table class='runtime-table table-striped table'><tr><td>email</td><td>password</td></tr><tr><td>sri@gmail.com</td><td>Sri123</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='15' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>To test the crm Login Functionality for InValid User</div>
+			<ul class='gc steps'>
+				<li test-id='17' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.user_enters_the_url()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user enters the url</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='18' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_login_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user clicks on the login button</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='19' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.user_enters_invalid_and_invalid(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters invalid "sri@gmail.com" and invalid "Sri123"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='20' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_submit_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user clicks on the submit button</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='21' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.invalid_credentials_message_is_displayed()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then invalid credentials message is displayed</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='22' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="com.stepDefinitions.Crm_LoginSteps.close_the_browser()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then close the browser</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
 		</li>
 	</ul>
 </div>
@@ -302,7 +301,153 @@
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@FunctionalTest</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 16, 2020 08:39:09 AM</td>
+										<td class='linked' test-id='1'>To test the crm application Login</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 16, 2020 08:39:09 AM</td>
+										<td class='linked' test-id='3'>To test the crm Login Functionality for Valid User</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 16, 2020 08:39:22 AM</td>
+										<td class='linked' test-id='15'>To test the crm Login Functionality for InValid User</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@SmokeTest</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 16, 2020 08:39:09 AM</td>
+										<td class='linked' test-id='2'>To test the crm Login Functionality for Valid User</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 16, 2020 08:39:09 AM</td>
+										<td class='linked' test-id='3'>To test the crm Login Functionality for Valid User</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@RegressionTest</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 16, 2020 08:39:22 AM</td>
+										<td class='linked' test-id='14'>To test the crm Login Functionality for InValid User</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Dec 16, 2020 08:39:22 AM</td>
+										<td class='linked' test-id='15'>To test the crm Login Functionality for InValid User</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -316,31 +461,73 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>24</div>
+					<div class='panel-lead'>14</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 14, 2020 07:23:13 AM</div>
+					<div class='panel-lead'>Dec 16, 2020 08:38:59 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 14, 2020 07:23:34 AM</div>
+			 		<div class='panel-lead'>Dec 16, 2020 08:39:26 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 20s+910ms</div>
+					<div class='panel-lead'>0h 0m 26s+913ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@FunctionalTest</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									66.667%
+							</td>
+						</tr>
+						<tr>
+							<td>@SmokeTest</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@RegressionTest</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -359,8 +546,8 @@
 				warningParent: 0,
 				skipParent: 0,
 				exceptionsParent: 0,
-				childCount: 1,
-				passChild: 1,
+				childCount: 2,
+				passChild: 2,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -369,8 +556,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 24,
-				passGrandChild: 24,
+				grandChildCount: 14,
+				passGrandChild: 14,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -383,7 +570,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "To test the crm application calendar":19.425
+			        "To test the crm application Login":14.842
 			};
 		</script>
 	

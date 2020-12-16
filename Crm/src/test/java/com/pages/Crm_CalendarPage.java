@@ -24,7 +24,7 @@ public class Crm_CalendarPage {
 	WebElement title;
 	@FindBy(xpath = "//div[@name='calendar']")
 	WebElement calDD;
-	@FindBy(xpath ="//div[@name='calendar']/div/div/span")
+	@FindBy(xpath = "//div[@name='calendar']/div/div/span")
 	List<WebElement> calList;
 	@FindBy(xpath = "//input[@name='calendarName']")
 	WebElement newCalName;
@@ -83,6 +83,8 @@ public class Crm_CalendarPage {
 
 	@FindBy(xpath = "//div[@name='case']/input")
 	WebElement caseSearch;
+	@FindBy(xpath = "//div[@class='field'][1]/div/div/span/p")
+	WebElement finalTitle;
 
 	public Crm_CalendarPage(WebDriver driver) {
 		this.driver = driver;
@@ -99,7 +101,9 @@ public class Crm_CalendarPage {
 		newBtn.click();
 	}
 
-	public void enterTitle(String titleName) {
+	public void enterTitle(String titleName) throws Exception {
+		title.clear();
+		Thread.sleep(1000);
 		Actions action = new Actions(driver);
 		action.moveToElement(title).build().perform();
 		action.sendKeys(title, titleName).build().perform();
@@ -114,51 +118,52 @@ public class Crm_CalendarPage {
 	 * 
 	 * }
 	 */
-	public void enterCalendarName() {
-		calDD.click();
-		calName.click();
-	}
-	
-	/*public void enterExistingCalendar(String calName) {
+//	public void enterCalendarName() {
+//		calDD.click();
+//		calName.click();
+//	}
+
+	public void enterExistingCalendar(String calName) {
 		calDD.click();
 		for (WebElement cal : calList) {
-			if(cal.getText().equals(calName)) {
+			if (cal.getText().equals(calName)) {
 				cal.click();
 			}
-					
+
 		}
-		
+
 	}
+
 	public void enterNewCalendarName(String Name) {
-		//calDD.click();
+		calDD.click();
 		int size = calList.size();
-		int last = size-1;
+		int last = size - 1;
 		calList.get(last).click();
 		newCalName.sendKeys(Name);
 		newCalSave.click();
 		enterExistingCalendar(Name);
-		
+
 	}
-	public void enterCalendarName(String cal) {
-		calDD.click();
-		for(int i=0;i<calList.size();i++) {
-			if(calList.get(i).getText().equals(cal))
-				calList.get(i).click();
-			
-			else
-				enterNewCalendarName(cal);
-		}
-	}*/
+
+	/*
+	 * public void enterCalendarName(String cal) { calDD.click(); for(int
+	 * i=0;i<calList.size();i++) { if(calList.get(i).getText().equals(cal))
+	 * calList.get(i).click();
+	 * 
+	 * else enterNewCalendarName(cal); } }
+	 */
 	public void enterStartDate(String sdate) {
 		startDate.clear();
 		startDate.sendKeys(sdate);
 	}
 
-//	public void enterEndDate(String edate) {
-//		endDate.clear();
-//		endDate.clear();
-//		endDate.sendKeys(edate);
-//	}
+	public void enterEndDate(String edate) throws Exception {
+		endDate.clear();
+		Thread.sleep(2000);
+		endDate.clear();
+		endDate.sendKeys(edate);
+	}
+
 	public void selectCategory(String catName) {
 		categoryDD.click();
 		for (WebElement category : categoryList) {
@@ -172,7 +177,6 @@ public class Crm_CalendarPage {
 
 	public void clickOnAllDay() {
 		if (!allDayToggleBox.isSelected()) {
-			System.out.println("hellooo");
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
 			jse.executeScript("arguments[0].click()", allDayToggleBox);
 			// allDayToggleBox.click();
@@ -213,36 +217,6 @@ public class Crm_CalendarPage {
 		deal.sendKeys(Keys.ENTER);
 
 	}
-//	public void enterTagandDeal(String tagName, String dealName) {
-//		
-//		
-//		
-//		tag.sendKeys(tagName);
-//		System.out.println(tagList.size());
-//		for (WebElement tags : tagList) {
-//			if(tags.getText().equals(tagName)) {
-//				System.out.println(tags.getText());
-//				tags.click();
-//				break;
-//			}
-//			else 
-//				addTag.click();
-//		}
-//		deal.sendKeys(dealName);
-//		System.out.println(dealList.size());
-//		for (WebElement deal1 : dealList) {
-//			if(deal1.getText().equals(dealName)) {
-//				//System.out.println("yes");
-//				deal1.click();
-//				break;
-//			}
-//			else
-//				addDeal.click();
-//			
-//		}
-//		
-//		
-//	}
 
 	public void enterCompany(String companyName) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -268,9 +242,9 @@ public class Crm_CalendarPage {
 		caseSearch.sendKeys(caseName);
 		caseSearch.sendKeys(Keys.ENTER);
 	}
-	public void takesScreenshot() {
-		SeleniumUtilities su = new SeleniumUtilities(driver);
-		su.to_take_screenshot("/src/test/resources/Screenshots/calendar.png");
+
+	public String getEventTitle() {
+		return finalTitle.getText();
 	}
 
 }

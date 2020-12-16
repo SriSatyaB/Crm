@@ -2,11 +2,24 @@ package com.stepDefinitions;
 
 
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 
 import com.baseClasses.Library;
 import com.pages.Crm_LoginPage;
+import com.reusableFunctions.SeleniumUtilities;
+import com.vimalselvam.cucumber.listener.Reporter;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,7 +29,7 @@ public class Crm_LoginSteps extends Library {
 
 	@Given("user enters the url")
 	public void user_enters_the_url() {
-		browserSetUp();
+		//browserSetUp();
 	}
 
 	@Then("user clicks on the login button")
@@ -43,12 +56,13 @@ public class Crm_LoginSteps extends Library {
 	@Then("user verify the username")
 	public void user_verify_the_username() {
 		String name = lp.verifyUser();
-		//Assert.assertEquals(name, "Satya B");
+		Assert.assertEquals(name, "Satya Bolloju");
 	}
 
 	@Then("logout from the application")
 	public void logout_from_the_application() {
-		lp.logout();
+		//lp.logout();
+		
 	}
 
 	@Then("close the browser")

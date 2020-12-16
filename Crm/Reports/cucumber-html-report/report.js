@@ -1,266 +1,304 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/Features/crm_calendar.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/Features/crm_login.feature");
 formatter.feature({
-  "name": "To test the crm application calendar",
+  "name": "To test the crm application Login",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    }
+  ]
 });
-formatter.background({
-  "name": "To login to the crm application",
+formatter.scenarioOutline({
+  "name": "To test the crm Login Functionality for Valid User",
   "description": "",
-  "keyword": "Background"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@SmokeTest"
+    }
+  ]
 });
 formatter.step({
-  "name": "user enters the crm  url",
+  "name": "user enters the url",
   "keyword": "Given "
 });
-formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_the_crm_url()"
-});
-formatter.result({
-  "status": "passed"
-});
 formatter.step({
-  "name": "user clicks on  login button",
+  "name": "user clicks on the login button",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_clicks_on_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
 formatter.step({
-  "name": "user enters email and password",
+  "name": "user enters \"\u003cemail\u003e\" and \"\u003cpassword\u003e\"",
   "keyword": "When "
 });
-formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_email_and_password()"
-});
-formatter.result({
-  "status": "passed"
-});
 formatter.step({
-  "name": "user clicks on  submit button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_clicks_on_submit_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user navigates to the home page",
+  "name": "user clicks on the submit button",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_navigates_to_the_home_page()"
+formatter.step({
+  "name": "user should be launched on the home page",
+  "keyword": "Then "
 });
-formatter.result({
-  "status": "passed"
+formatter.step({
+  "name": "user verify the username",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "logout from the application",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "close the browser",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "email",
+        "password"
+      ]
+    },
+    {
+      "cells": [
+        "pdeep.nov20@mail.com",
+        "Satya@123"
+      ]
+    }
+  ]
 });
 formatter.scenario({
-  "name": "To test the crm calendar functionality",
+  "name": "To test the crm Login Functionality for Valid User",
   "description": "",
-  "keyword": "Scenario"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    },
+    {
+      "name": "@SmokeTest"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.step({
-  "name": "user is logged into the application",
+  "name": "user enters the url",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_is_logged_into_the_application()"
+  "location": "com.stepDefinitions.Crm_LoginSteps.user_enters_the_url()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on the calendar icon",
+  "name": "user clicks on the login button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_clicks_on_the_calendar_icon()"
+  "location": "com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_login_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on the new button",
+  "name": "user enters \"pdeep.nov20@mail.com\" and \"Satya@123\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_clicks_on_the_new_button()"
+  "location": "com.stepDefinitions.Crm_LoginSteps.user_enters_and(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "new event form is opened",
+  "name": "user clicks on the submit button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.new_event_form_is_opened()"
+  "location": "com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_submit_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters \"Framework5\" in title",
+  "name": "user should be launched on the home page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_in_title(java.lang.String)"
+  "location": "com.stepDefinitions.Crm_LoginSteps.user_should_be_launched_on_the_home_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters a  calendar",
+  "name": "user verify the username",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_a_calendar()"
+  "location": "com.stepDefinitions.Crm_LoginSteps.user_verify_the_username()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters \"15/12/2020 20:00\" as startdate",
+  "name": "logout from the application",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_as_startdate(java.lang.String)"
+  "location": "com.stepDefinitions.Crm_LoginSteps.logout_from_the_application()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters \"16/12/2020 20:00\" as enddate",
+  "name": "close the browser",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_as_enddate(java.lang.String)"
+  "location": "com.stepDefinitions.Crm_LoginSteps.close_the_browser()"
 });
 formatter.result({
   "status": "passed"
 });
+formatter.after({
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "name": "To test the crm Login Functionality for InValid User",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@RegressionTest"
+    }
+  ]
+});
 formatter.step({
-  "name": "user enters \"This is my first test calendar\" in description",
+  "name": "user enters the url",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "user clicks on the login button",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_in_description(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
+formatter.step({
+  "name": "user enters invalid \"\u003cemail\u003e\" and invalid \"\u003cpassword\u003e\"",
+  "keyword": "When "
 });
 formatter.step({
-  "name": "user enters \"Ca office\" in location",
+  "name": "user clicks on the submit button",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_in_location(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
 formatter.step({
-  "name": "user selects \"Important\" in category",
+  "name": "invalid credentials message is displayed",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_selects_in_category(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
 formatter.step({
-  "name": "user enters one or more  tags",
+  "name": "close the browser",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
   "rows": [
-    {}
-  ],
-  "keyword": "Then "
+    {
+      "cells": [
+        "email",
+        "password"
+      ]
+    },
+    {
+      "cells": [
+        "sri@gmail.com",
+        "Sri123"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "To test the crm Login Functionality for InValid User",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    },
+    {
+      "name": "@RegressionTest"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters the url",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_one_or_more_tags(io.cucumber.datatable.DataTable)"
+  "location": "com.stepDefinitions.Crm_LoginSteps.user_enters_the_url()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters one or more deals",
-  "rows": [
-    {}
-  ],
+  "name": "user clicks on the login button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_one_or_more_deals(io.cucumber.datatable.DataTable)"
+  "location": "com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_login_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters \"case1\" in case",
-  "keyword": "Then "
+  "name": "user enters invalid \"sri@gmail.com\" and invalid \"Sri123\"",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_in_case(java.lang.String)"
+  "location": "com.stepDefinitions.Crm_LoginSteps.user_enters_invalid_and_invalid(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user checks the allDay toggle",
+  "name": "user clicks on the submit button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_checks_the_allDay_toggle()"
+  "location": "com.stepDefinitions.Crm_LoginSteps.user_clicks_on_the_submit_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters one or more tasks",
-  "rows": [
-    {}
-  ],
+  "name": "invalid credentials message is displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_one_or_more_tasks(io.cucumber.datatable.DataTable)"
+  "location": "com.stepDefinitions.Crm_LoginSteps.invalid_credentials_message_is_displayed()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects \"30 Minutes\" as alert time",
+  "name": "close the browser",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_selects_as_alert_time(java.lang.String)"
+  "location": "com.stepDefinitions.Crm_LoginSteps.close_the_browser()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "user enters company as \"Agama\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_enters_company_as(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on the save Btn",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinitions.Crm_Calendar.user_clicks_on_the_save_Btn()"
-});
-formatter.result({
+formatter.after({
   "status": "passed"
 });
 });
